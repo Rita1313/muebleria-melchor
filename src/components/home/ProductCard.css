@@ -1,0 +1,149 @@
+.product-card {
+  min-height: 320px;
+  padding: 16px;
+  border-radius: 14px;
+  background: white;
+  position: relative;
+  box-shadow: 0 6px 18px rgba(0,0,0,.055);
+}
+
+.product-card__badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 6px 9px;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+  z-index: 2;
+}
+
+.product-card__badge--pink {
+  background: var(--primary);
+}
+
+.product-card__badge--orange {
+  background: var(--orange);
+}
+
+.product-card__image {
+  height: 180px;
+  margin-bottom: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.product-card__image span {
+  display: block;
+  filter: drop-shadow(0 14px 14px rgba(0,0,0,.18));
+}
+
+.product-card h3 {
+  margin: 0 0 8px;
+  min-height: 42px;
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.product-card__prices {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-card__prices strong {
+  font-size: 23px;
+}
+
+.product-card__prices del {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.product-card__whatsapp {
+  margin-top: 10px;
+  background: transparent;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.product-card__image--fridge span {
+  width: 68px;
+  height: 145px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #b9b9b9, #5d5d5d);
+}
+
+.product-card__image--washer span {
+  width: 118px;
+  height: 125px;
+  border-radius: 10px;
+  background: radial-gradient(circle, #111 0 35%, #333 36% 50%, #181818 51%);
+}
+
+.product-card__image--stove span {
+  width: 145px;
+  height: 105px;
+  border-radius: 8px;
+  background: linear-gradient(#333 0 20%, #b8b8b8 21% 100%);
+}
+
+.product-card__image--airfryer span {
+  width: 95px;
+  height: 140px;
+  border-radius: 45px 45px 18px 18px;
+  background: #171717;
+}
+
+.product-card__image--blender span {
+  width: 75px;
+  height: 140px;
+  border-radius: 8px 8px 30px 30px;
+  background: linear-gradient(#d8d8d8 0 45%, #111 46%);
+}
+
+.product-card__image--projector span {
+  width: 120px;
+  height: 80px;
+  border-radius: 12px;
+  background: linear-gradient(#e7e7e7, #9a9a9a);
+}
+
+.product-card__image--speaker span {
+  width: 140px;
+  height: 72px;
+  border-radius: 30px;
+  background: #232323;
+}
+
+.product-card__image--lamp span {
+  width: 90px;
+  height: 100px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #ff47d4, #ffe56d);
+}
+
+.product-card__image--watch span {
+  width: 75px;
+  height: 115px;
+  border-radius: 28px;
+  background: #111;
+}
+
+.product-card__image--cable span {
+  width: 145px;
+  height: 62px;
+  border-radius: 28px;
+  background: #333;
+}
+
+@media (max-width: 650px) {
+  .product-card {
+    min-width: 210px;
+  }
+}

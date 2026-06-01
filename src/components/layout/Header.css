@@ -1,0 +1,258 @@
+/* Contenedor del fondo (simulando el fondo rosa/degradado de tu web) */
+.site-header {
+  background: linear-gradient(to bottom, #ffeef2, #ffffff);
+  padding: 20px;
+    top: 0;
+  z-index: 1000;
+    position: sticky;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* La barra blanca flotante */
+.header__container {
+  background-color: #ffffff;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+/* --- BRAND / LOGO --- */
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.header__logo-wrapper {
+  background-color: #e6005c; /* Color fucsia de la imagen */
+  border-radius: 14px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__logo-icon {
+  color: white;
+}
+
+.header__title {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  line-height: 1.1;
+  color: #e6005c;
+  margin: 0;
+}
+
+.header__title span {
+  font-weight: 400;
+}
+
+.header__title strong {
+  font-weight: 800;
+}
+
+/* --- BARRA DE BÚSQUEDA --- */
+.header__search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 100px;
+  padding-left: 16px;
+  overflow: hidden;
+  flex: 1;
+  max-width: 380px;
+  background-color: #fcfcfc;
+   padding: 0; 
+}
+
+.header__search input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+  padding: 10px 0;
+}
+
+.header__search input::placeholder {
+  color: #999;
+}
+
+.header__search-btn {
+  background-color: #e6005c;
+  border: none;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.header__search-btn:hover {
+  background-color: #cc0052;
+}
+
+/* --- NAVEGACIÓN --- */
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  height: 50px; /* Altura fija para controlar la línea inferior */
+}
+
+.header__nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  height: 100%;
+  padding: 0 4px;
+  transition: color 0.2s ease;
+}
+
+.header__nav-link .nav-icon {
+  color: #444;
+  transition: color 0.2s ease;
+}
+
+/* Hover general de los links */
+.header__nav-link:hover {
+  color: #e6005c;
+}
+.header__nav-link:hover .nav-icon {
+  color: #e6005c;
+}
+
+/* Estado Activo (Link Seleccionado) */
+.header__nav-link.active-link {
+  color: #e6005c;
+}
+
+.header__nav-link.active-link .nav-icon {
+  color: #e6005c;
+}
+
+/* La línea roja/fucsia inferior que se ve en "Inicio" */
+.header__nav-link.active-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #e6005c;
+  border-radius: 3px 3px 0 0;
+}
+
+/* --- SECCIÓN WHATSAPP --- */
+.header__whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  text-align: right;
+  margin-left: 10px;
+}
+
+.header__whatsapp-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.header__whatsapp-text strong {
+  font-size: 13px;
+  color: #000;
+  font-weight: 700;
+}
+
+.header__whatsapp-text span {
+  font-size: 11px;
+  color: #777;
+}
+
+.header__whatsapp-icon {
+  background-color: #25d366; /* Verde oficial de WhatsApp */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(37, 211, 102, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.header__whatsapp:hover .header__whatsapp-icon {
+  transform: scale(1.05);
+}
+
+/* --- RESPONSIVE BÁSICO --- */
+@media (max-width: 1024px) {
+  .header__container {
+    border-radius: 20px;
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+  .header__nav {
+    order: 4;
+    width: 100%;
+    justify-content: center;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 10px;
+  }
+}
+/* Ocultar navegación grande en tablet y móvil */
+@media (max-width: 1024px) {
+  .header__nav,
+  .header__whatsapp {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .header__search {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border: 1px solid #d9d9d9;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .header__search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 16px;
+  }
+
+  .header__search button {
+    width: 56px;       /* aumenta el ancho */
+    min-width: 56px;   /* evita que se encoja */
+    height: 100%;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    background: #f5006a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

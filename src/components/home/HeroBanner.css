@@ -1,0 +1,203 @@
+.hero {
+  min-height: 445px;
+  margin-top: 22px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 80% 30%, #ef8ea7 0 18%, transparent 19%),
+    linear-gradient(90deg, #ffdce8 0%, #ffd2df 45%, #e98fa2 100%);
+  display: grid;
+  grid-template-columns: 45% 55%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.hero__content {
+  padding: 68px 0 60px 58px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero__content h2 {
+  margin: 0;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: .98;
+  letter-spacing: -1.8px;
+}
+
+.hero__content h2 span {
+  color: var(--primary);
+}
+
+.hero__content p {
+  margin: 22px 0;
+  font-size: 25px;
+  line-height: 1.25;
+}
+
+.hero__features {
+  display: flex;
+  gap: 28px;
+  margin: 30px 0;
+}
+
+.hero__features div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero__features svg {
+  color: var(--primary);
+}
+
+.hero__content button {
+  padding: 16px 36px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: white;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.hero__products {
+  position: relative;
+}
+
+.hero__fridge,
+.hero__washer,
+.hero__airfryer,
+.hero__blender,
+.hero__vacuum {
+  position: absolute;
+  bottom: 34px;
+  background: linear-gradient(145deg, #f7f7f7, #9c9c9c);
+  box-shadow: 0 20px 28px rgba(0,0,0,.18);
+}
+
+.hero__fridge {
+  width: 190px;
+  height: 355px;
+  left: 190px;
+  border-radius: 12px 12px 8px 8px;
+  background: linear-gradient(90deg, #323232 0 48%, #252525 49% 51%, #494949 52%);
+}
+
+.hero__fridge::before {
+  content: "";
+  position: absolute;
+  left: 54px;
+  top: 90px;
+  width: 34px;
+  height: 48px;
+  border-radius: 4px;
+  background: #111;
+}
+
+.hero__washer {
+  width: 170px;
+  height: 205px;
+  left: 20px;
+  border-radius: 8px;
+  background: #f4f4f4;
+}
+
+.hero__washer::after {
+  content: "";
+  position: absolute;
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  left: 32px;
+  bottom: 28px;
+  background: radial-gradient(circle, #111 0 38%, #333 39% 55%, #111 56%);
+}
+
+.hero__airfryer {
+  width: 110px;
+  height: 150px;
+  left: 380px;
+  border-radius: 50px 50px 18px 18px;
+  background: #151515;
+}
+
+.hero__blender {
+  width: 82px;
+  height: 180px;
+  left: 500px;
+  border-radius: 8px 8px 30px 30px;
+  background: linear-gradient(#1d1d1d 0 38%, #fafafa 39% 58%, #111 59%);
+}
+
+.hero__vacuum {
+  width: 44px;
+  height: 310px;
+  left: 625px;
+  bottom: 18px;
+  border-radius: 24px;
+  background: #3f3f3f;
+  transform: rotate(-12deg);
+}
+
+.hero__dots {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  display: flex;
+  gap: 9px;
+}
+
+.hero__dots span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: white;
+}
+
+.hero__dots span:first-child {
+  background: var(--primary);
+}
+
+@media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: 640px;
+  }
+
+  .hero__content {
+    padding: 38px 26px;
+  }
+
+  .hero__content p {
+    font-size: 19px;
+  }
+
+  .hero__features {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .hero__products {
+    height: 300px;
+  }
+
+  .hero__fridge {
+    left: 45%;
+    transform: translateX(-50%);
+  }
+
+  .hero__washer {
+    left: 5%;
+  }
+
+  .hero__airfryer {
+    left: 66%;
+  }
+
+  .hero__blender,
+  .hero__vacuum {
+    display: none;
+  }
+}

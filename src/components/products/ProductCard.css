@@ -1,0 +1,215 @@
+/* src/components/products/ProductCard.css */
+
+:root {
+  --card-bg: #ffffff;
+  --text-dark: #1f1f2e;
+  --text-gray-muted: #a0a0a0;
+  --gradient-oferta: linear-gradient(135deg, #ff007a, #ff4b2b);
+  --gradient-nuevo: linear-gradient(135deg, #ff007a, #7b1fa2);
+  --gradient-popular: linear-gradient(135deg, #ff0055, #ff7300);
+}
+
+.ml-card,
+.ml-card * {
+  box-sizing: border-box;
+}
+
+.ml-card {
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  padding: 18px;
+  cursor: pointer;
+  box-shadow: 0 14px 35px rgba(255, 0, 122, 0.08);
+  transition: 0.3s ease;
+}
+
+.ml-card:hover {
+  transform: translateY(-5px);
+}
+
+.ml-card__image-container {
+  position: relative;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.ml-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ml-card__tag {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  box-shadow: 0 6px 14px rgba(255, 0, 122, 0.25);
+}
+
+.ml-card__tag--oferta {
+  background: var(--gradient-oferta);
+}
+
+.ml-card__tag--nuevo {
+  background: var(--gradient-nuevo);
+}
+
+.ml-card__tag--popular {
+  background: var(--gradient-popular);
+}
+
+.ml-card__whatsapp {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #e8fff1;
+  background: #fff;
+  color: #25d366;
+  font-size: 1.25rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(37, 211, 102, 0.18);
+}
+
+.ml-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ml-card__title {
+  min-height: 42px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ml-card__price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.ml-card__price-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ml-card__price-current {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--text-dark);
+}
+
+.ml-card__price-old {
+  font-size: 0.78rem;
+  color: var(--text-gray-muted);
+  text-decoration: line-through;
+}
+
+.ml-card__discount-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #ff1493;
+  background: #fff0f7;
+  padding: 5px 8px;
+  border-radius: 8px;
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .ml-card {
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .ml-card__image-container {
+    height: 120px;
+    margin-bottom: 12px;
+  }
+
+  .ml-card__title {
+    font-size: 0.85rem;
+    min-height: 38px;
+  }
+
+  .ml-card__price-current {
+    font-size: 1.2rem;
+  }
+
+  .ml-card__tag {
+    font-size: 0.65rem;
+    padding: 5px 10px;
+  }
+
+  .ml-card__whatsapp {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Extra pequeño */
+@media (max-width: 380px) {
+  .ml-card {
+    padding: 12px;
+  }
+
+  .ml-card__image-container {
+    height: 105px;
+  }
+
+  .ml-card__title {
+    font-size: 0.8rem;
+  }
+
+  .ml-card__price-current {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 600px) {
+  .products-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0 4px;
+  }
+
+  .products-header h2 {
+    font-size: 1.55rem;
+    line-height: 1.15;
+    max-width: 220px;
+  }
+
+  .products-header span,
+  .products-count {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    text-align: right;
+    max-width: 95px;
+  }
+}
