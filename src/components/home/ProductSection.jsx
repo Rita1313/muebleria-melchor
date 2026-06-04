@@ -15,10 +15,13 @@ const ProductSection = ({ title, products }) => {
       </div>
 
       <div className="product-section__grid">
-        {products.map((product) => (
-          <ProductCard product={product} key={product.name} />
-        ))}
-      </div>
+  {products?.map((product) => (
+    <ProductCard
+      product={product}
+      key={product.id}
+    />
+  ))}
+</div>
     </section>
   )
 }
