@@ -1,17 +1,17 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
-import Header from '../components/layout/Header'
-import HeroBanner from '../components/home/HeroBanner'
-import ProductSection from '../components/home/ProductSection'
-import Newsletter from '../components/home/Newsletter'
+import Header from "../components/layout/Header";
+import HeroBanner from "../components/home/HeroBanner";
+import ProductSection from "../components/home/ProductSection";
+import Newsletter from "../components/home/Newsletter";
 
-import { getProductos } from '../services/api'
+import { getProductos } from "../services/api";
 
-import './Home.css'
+import "./Home.css";
 
 const Home = () => {
 
-  const [productos, setProductos] = useState([])
+  const [productos, setProductos] = useState([]);
 
   useEffect(() => {
 
@@ -19,24 +19,24 @@ const Home = () => {
 
       try {
 
-        const data = await getProductos()
+        const data = await getProductos();
 
-        setProductos(data)
+        setProductos(data);
 
       } catch (error) {
 
         console.error(
-          'No se pudo conectar con la API',
+          "No se pudo conectar con la API",
           error
-        )
+        );
 
       }
 
-    }
+    };
 
-    cargarProductos()
+    cargarProductos();
 
-  }, [])
+  }, []);
 
   return (
     <div className="home-page">
@@ -57,7 +57,7 @@ const Home = () => {
       </main>
 
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
